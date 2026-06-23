@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Volt Harold Marketing Corporation – Your Trusted Honda, Yamaha & Suzuki Motorcycle Dealer in Angeles City, Pampanga. Easy Financing. Wide Selection." />
+    <title>Volt Harold Marketing Corporation | Motorcycle Dealer – Angeles City, Pampanga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ═══════════ NAVIGATION ═══════════ -->
+    <header class="nav-header" id="navHeader">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" aria-label="Volt Harold Marketing Corporation">
+                <div class="logo-icon">
+                    <img src="logo.png" alt="">
+                </div>
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#motorcycles" class="nav-link" data-section="motorcycles">Motorcycles</a>
+                <a href="#brands" class="nav-link" data-section="brands">Brands</a>
+                <a href="#financing" class="nav-link" data-section="financing">Financing</a>
+                <a href="#promotions" class="nav-link" data-section="promotions">Promotions</a>
+                <a href="#about" class="nav-link" data-section="about">About Us</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+
+            <a href="tel:09338224649" class="nav-cta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>                0933 822 4649
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+        </div>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-bg-image">
+                <img src="background.png" alt="Volt Harold Showroom" loading="eager" onerror="this.parentElement.classList.add('no-image')" />
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-left reveal">
+                <div class="hero-eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    <span>Angeles City, Pampanga</span>
+                </div>
+                <h1 class="hero-headline">
+                    <span class="headline-main">RIDE WITH</span>
+                    <span class="headline-accent">CONFIDENCE</span>
+                </h1>
+                <p class="hero-sub">Your Trusted Motorcycle Dealer in Angeles City, Pampanga — Honda, Yamaha & Suzuki Authorized</p>
+
+                <div class="brand-logos-hero">
+                    <div class="brand-logo-item">
+                        <img src="honda.png" alt="Honda" onerror="this.src=''; this.parentElement.innerHTML='<span class=\'brand-text honda\'>HONDA</span>'" />
+                    </div>
+                    <div class="brand-divider"></div>
+                    <div class="brand-logo-item">
+                        <img src="yamaha.png" alt="Yamaha" onerror="this.src=''; this.parentElement.innerHTML='<span class=\'brand-text yamaha\'>YAMAHA</span>'" />
+                    </div>
+                    <div class="brand-divider"></div>
+                    <div class="brand-logo-item">
+                        <img src="suzuki.png" alt="Suzuki" onerror="this.src=''; this.parentElement.innerHTML='<span class=\'brand-text suzuki\'>SUZUKI</span>'" />
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#motorcycles" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 6l-3-4H6L3 6H1v2h1l1 12h18l1-12h1V6h-2zm-9 11l-4-4h3V9h2v4h3l-4 4z"/></svg> View Motorcycles
+                    </a>
+                    <a href="#financing" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg> Get Financing
+                    </a>
+                    <a href="tel:09338224649" class="btn btn-ghost">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>                        Call Now
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="1000">0</span>
+
+                        <span class="stat-label">Units Sold</span>
+                    </div>
+                    <div class="stat-sep"></div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="3">0</span>
+                        <span class="stat-label">Top Brands</span>
+                    </div>
+                    <div class="stat-sep"></div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="10">0</span>
+
+                        <span class="stat-label">Years in Business</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="hero-scroll-hint">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+    </section>
+
+    <!-- ═══════════ BRANDS ═══════════ -->
+    <section class="brands-section">
+        <div class="section-container">
+
+
+        </div>
+    </section>
+
+    <!-- ═══════════ FEATURED MOTORCYCLES ═══════════ -->
+    <section class="motorcycles-section" id="motorcycles">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Ready for Delivery</span>
+                <h2 class="section-title">Featured Motorcycles</h2>
+                <p class="section-desc">Browse our in-stock units — all with flexible financing options available</p>
+            </div>
+
+            <div class="moto-carousel-wrapper">
+                <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+
+                <div class="moto-track-outer" id="motoTrackOuter">
+                    <div class="moto-track" id="motoTrack">
+
+                        <div class="moto-card reveal" data-delay="0" data-colors="Red, Black, Blue, Gray" data-features="Liquid Cooled, Full LED Lighting, Idling Stop System, Combined Brake System">
+                            <div class="moto-badge badge-new">NEW</div>
+                            <div class="moto-image-wrap">
+                                <img src="honda-click-125.jpg" alt="Honda Click 125" loading="lazy" onerror="this.parentElement.classList.add('moto-img-fallback')" />
+                                <div class="moto-img-overlay"></div>
+                            </div>
+                            <div class="moto-card-body">
+                                <div class="moto-brand">Honda</div>
+                                <h3 class="moto-name">Click 125</h3>
+                                <div class="moto-specs">
+                                    <span>125cc</span><span class="spec-dot">·</span><span>FI</span><span class="spec-dot">·</span><span>eSP</span>
+                                </div>
+                                <div class="moto-price">Starting at <strong>₱3,500 / mo</strong></div>
+                                <a href="#contact" class="moto-inquire-btn">Inquire Now</a>
+                            </div>
+                        </div>
+
+                        <div class="moto-card reveal" data-delay="80" data-colors="Matte Gunpowder Black, Matte Solar Red" data-features="Honda Selectable Torque Control (HSTC), Adjustable Windscreen, Smart Key System, Large Underseat Storage">
+                            <div class="moto-badge badge-popular">POPULAR</div>
+                            <div class="moto-image-wrap">
+                                <img src="honda-adv160.jpg" alt="Honda ADV160" loading="lazy" onerror="this.parentElement.classList.add('moto-img-fallback')" />
+                                <div class="moto-img-overlay"></div>
+                            </div>
+                            <div class="moto-card-body">
+                                <div class="moto-brand">Honda</div>
+                                <h3 class="moto-name">ADV160</h3>
+                                <div class="moto-specs">
+                                    <span>160cc</span><span class="spec-dot">·</span><span>eSP+</span><span class="spec-dot">·</span><span>ABS</span>
+                                </div>
+                                <div class="moto-price">Starting at <strong>₱5,900 / mo</strong></div>
+                                <a href="#contact" class="moto-inquire-btn">Inquire Now</a>
+                            </div>
+                        </div>
+
+                        <div class="moto-card reveal" data-delay="160" data-colors="Off-White, Matte Gray" data-features="Stop & Start System, Smart Motor Generator, Answer Back System, Scratch-Resistant Matte Panels">
+                            <div class="moto-badge badge-new">NEW</div>
+                            <div class="moto-image-wrap">
+                                <img src="yamaha-mio-gear.jpg" alt="Yamaha Mio Gear" loading="lazy" onerror="this.parentElement.classList.add('moto-img-fallback')" />
+                                <div class="moto-img-overlay"></div>
+                            </div>
+                            <div class="moto-card-body">
+                                <div class="moto-brand">Yamaha</div>
+                                <h3 class="moto-name">Mio Gear</h3>
+                                <div class="moto-specs">
+                                    <span>125cc</span><span class="spec-dot">·</span><span>Blue Core</span>
+                                </div>
+                                <div class="moto-price">Starting at <strong>₱3,200 / mo</strong></div>
+                                <a href="#contact" class="moto-inquire-btn">Inquire Now</a>
+                            </div>
+                        </div>
+
+                        <div class="moto-card reveal" data-delay="240" data-colors="Matte Dark Gray, Matte Burgundy, Sword Gray" data-features="Traction Control System, Y-Connect Connectivity, Smart Key System, LED Twin Headlight">
+                            <div class="moto-badge badge-popular">POPULAR</div>
+                            <div class="moto-image-wrap">
+                                <img src="yamaha-nmax.jpg" alt="Yamaha NMAX" loading="lazy" onerror="this.parentElement.classList.add('moto-img-fallback')" />
+                                <div class="moto-img-overlay"></div>
+                            </div>
+                            <div class="moto-card-body">
+                                <div class="moto-brand">Yamaha</div>
+                                <h3 class="moto-name">NMAX</h3>
+                                <div class="moto-specs">
+                                    <span>155cc</span><span class="spec-dot">·</span><span>VVA</span><span class="spec-dot">·</span><span>ABS</span>
+                                </div>
+                                <div class="moto-price">Starting at <strong>₱5,700 / mo</strong></div>
+                                <a href="#contact" class="moto-inquire-btn">Inquire Now</a>
+                            </div>
+                        </div>
+
+                        <div class="moto-card reveal" data-delay="320" data-colors="Metallic Matte Black, Bronze, Matte Bordeaux Red" data-features="Suzuki Eco Performance, Full Digital Instrument Panel, 21.5L Underseat Storage, DC Outlet Charger">
+                            <div class="moto-badge badge-hot">HOT</div>
+                            <div class="moto-image-wrap">
+                                <img src="suzuki-burgman.jpg" alt="Suzuki Burgman" loading="lazy" onerror="this.parentElement.classList.add('moto-img-fallback')" />
+                                <div class="moto-img-overlay"></div>
+                            </div>
+                            <div class="moto-card-body">
+                                <div class="moto-brand">Suzuki</div>
+                                <h3 class="moto-name">Burgman</h3>
+                                <div class="moto-specs">
+                                    <span>150cc</span><span class="spec-dot">·</span><span>FI</span><span class="spec-dot">·</span><span>SEP</span>
+                                </div>
+                                <div class="moto-price">Starting at <strong>₱4,800 / mo</strong></div>
+                                <a href="#contact" class="moto-inquire-btn">Inquire Now</a>
+                            </div>
+                        </div>
+
+                        <div class="moto-card reveal" data-delay="400" data-colors="Red, Black" data-features="Heavy Duty Chassis, Kick & Electric Starter, Passing Light, High Fuel Efficiency">
+                            <div class="moto-badge badge-popular">CLASSIC</div>
+                            <div class="moto-image-wrap">
+                                <img src="honda-tmx-125.jpg" alt="Honda TMX 125" loading="lazy" onerror="this.parentElement.classList.add('moto-img-fallback')" />
+                                <div class="moto-img-overlay"></div>
+                            </div>
+                            <div class="moto-card-body">
+                                <div class="moto-brand">Honda</div>
+                                <h3 class="moto-name">TMX 125 Alpha</h3>
+                                <div class="moto-specs">
+                                    <span>125cc</span><span class="spec-dot">·</span><span>OHV</span><span class="spec-dot">·</span><span>Manual</span>
+                                </div>
+                                <div class="moto-price">Starting at <strong>₱2,900 / mo</strong></div>
+                                <a href="#contact" class="moto-inquire-btn">Inquire Now</a>
+                            </div>
+                        </div>
+
+                        <div class="moto-card reveal" data-delay="480" data-colors="Candy Jackal Blue, Titan Black, Summer Red" data-features="Suzuki Eco Performance Engine, Sporty Shutter Key, Durable Frame, Pulse-type Disc Brake">
+                            <div class="moto-badge badge-new">NEW</div>
+                            <div class="moto-image-wrap">
+                                <img src="suzuki-smash.jpg" alt="Suzuki Smash" loading="lazy" onerror="this.parentElement.classList.add('moto-img-fallback')" />
+                                <div class="moto-img-overlay"></div>
+                            </div>
+                            <div class="moto-card-body">
+                                <div class="moto-brand">Suzuki</div>
+                                <h3 class="moto-name">Smash Fi</h3>
+                                <div class="moto-specs">
+                                    <span>115cc</span><span class="spec-dot">·</span><span>FI</span><span class="spec-dot">·</span><span>Semi-Auto</span>
+                                </div>
+                                <div class="moto-price">Starting at <strong>₱2,700 / mo</strong></div>
+                                <a href="#contact" class="moto-inquire-btn">Inquire Now</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <div class="moto-modal" id="motoModal" aria-hidden="true">
+        <div class="moto-modal-overlay" id="modalOverlay"></div>
+        <div class="moto-modal-container">
+            <button class="moto-modal-close" id="modalClose" aria-label="Close modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+            <div class="moto-modal-content">
+                <div class="moto-modal-left">
+                    <img id="modalImg" src="" alt="Motorcycle Image">
+                </div>
+                <div class="moto-modal-right">
+                    <span id="modalBrand" class="modal-brand"></span>
+                    <h2 id="modalName" class="modal-title"></h2>
+
+                    <div class="modal-section-title">Engine & Transmission</div>
+                    <div id="modalSpecsList" class="modal-specs-grid"></div>
+
+                    <div class="modal-section-title">Financing Estimate</div>
+                    <div id="modalPrice" class="modal-price"></div>
+
+                    <div class="modal-section-title">Available Color Options</div>
+                    <div id="modalColorsList" class="modal-colors-flex"></div>
+
+                    <div class="modal-section-title">Key Model Features</div>
+                    <ul id="modalFeaturesList" class="modal-features-ul"></ul>
+
+                    <div class="modal-actions">
+                        <a href="#contact" id="modalInquireBtn" class="moto-inquire-btn">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ FINANCING ═══════════ -->
+    <section class="finance-section" id="financing">
+        <div class="section-container">
+            <div class="finance-grid">
+
+                <div class="finance-info-side reveal">
+                    <span class="section-eyebrow">Finance</span>
+                    <h2 class="section-title">Easy Financing</h2>
+                    <p class="section-desc">Low down payment • Fast approval • No hassle</p>
+
+                    <div class="finance-features-list">
+                        <div class="fin-feat-card">
+                            <div class="fin-feat-icon">₱</div>
+                            <div>
+                                <h3>Low Down Payment</h3>
+                                <p>Start with minimal upfront cost</p>
+                            </div>
+                        </div>
+                        <div class="fin-feat-card">
+                            <div class="fin-feat-icon">📅</div>
+                            <div>
+                                <h3>Flexible Payment Terms</h3>
+                                <p>6 to 36 months — you choose</p>
+                            </div>
+                        </div>
+                        <div class="fin-feat-card">
+                            <div class="fin-feat-icon">✓</div>
+                            <div>
+                                <h3>Fast Approval</h3>
+                                <p>Get approved within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="fin-feat-card">
+                            <div class="fin-feat-icon">📄</div>
+                            <div>
+                                <h3>Requirements Assistance</h3>
+                                <p>We guide you through every step</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="finance-calc-side reveal" data-delay="100">
+                    <div class="main-calculator-card">
+                        <h3 class="calc-title">How much is your monthly payment?</h3>
+
+                        <div class="calc-inputs-grid">
+                            <div class="calc-input-group">
+                                <label for="calcBikeSelect">Select Motorcycle</label>
+                                <select id="calcBikeSelect" class="calc-select">
+                <option value="81400" selected>Honda Click 125</option>
+                <option value="166900">Honda ADV160</option>
+                <option value="79400">Yamaha Mio Gear</option>
+                <option value="151900">Yamaha NMAX</option>
+                <option value="94400">Suzuki Burgman</option>
+                <option value="58900">Honda TMX 125 Alpha</option>
+                <option value="62400">Suzuki Smash Fi</option>
+              </select>
+                            </div>
+
+                            <div class="calc-input-group">
+                                <label for="calcDpSelect">Downpayment</label>
+                                <select id="calcDpSelect" class="calc-select">
+                <option value="0.10" selected>10% Down Payment</option>
+                <option value="0.20">20% Down Payment</option>
+                <option value="0.30">30% Down Payment</option>
+              </select>
+                            </div>
+
+                            <div class="calc-input-group">
+                                <label for="calcTermSelect">Term</label>
+                                <select id="calcTermSelect" class="calc-select">
+                <option value="12">12 Months</option>
+                <option value="24">24 Months</option>
+                <option value="36" selected>36 Months</option>
+              </select>
+                            </div>
+                        </div>
+
+                        <div class="calc-output-display">
+                            <div class="output-row">
+                                <span>Required Downpayment:</span>
+                                <span id="pageDpValue" class="output-subnum">₱8,140</span>
+                            </div>
+                            <div class="output-row primary-row">
+                                <span class="est-label">Estimated Monthly Payment</span>
+                                <div class="price-wrap">
+                                    <span id="pageMonthlyValue" class="output-mainnum">₱2,850</span>
+                                    <span class="per-mo">/ month</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="calc-submit-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>                            Request Financing Information
+                        </a>
+
+                        <div class="calc-trust-badges">
+                            <span>🛡️ No Credit Card Needed</span>
+                            <span>👥 Multiple Financing Partners</span>
+                            <span>⚡ Same Day Inquiry</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ PROMOTIONS ═══════════ -->
+    <section class="promos-section" id="promotions">
+        <div class="section-container">
+            <div class="promo-banner-showcase reveal">
+                <img src="ads.png" alt="Volt Harold Special Promotions" class="promo-banner-img">
+                <div class="promo-banner-overlay-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+    <!-- ═══════════ TESTIMONIALS ═══════════ -->
+    <section class="testimonials-section" id="about">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Customer Stories</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-desc">Riders from all over Pampanga trust Volt Harold</p>
+            </div>
+
+            <div class="testimonials-wrapper">
+                <div class="testimonials-track" id="testimonialsTrack">
+
+                    <div class="testimonial-card reveal">
+                        <div class="testi-stars">★★★★★</div>
+                        <p class="testi-text">"Great service and very accommodating staff! Nakuha ko na yung Honda Click 125 ko sa magandang presyo. Highly recommended sa lahat ng naghahanap ng bagong motor!"</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">
+                                <img src="images/customer-1.jpg" alt="Efren Mania" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+                                <span class="avatar-fallback" style="display:none">EM</span>
+                            </div>
+                            <div class="testi-info">
+                                <strong>Efren Mania</strong>
+                                <span>Honda Click 125</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal" data-delay="100">
+                        <div class="testi-stars">★★★★★</div>
+                        <p class="testi-text">"Highly recommended for riders in Pampanga! Mabilis at walang hassle ang financing. Nakuha ko agad yung NMAX ko in just 2 days. Salamat Volt Harold!"</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">
+                                <img src="images/customer-2.jpg" alt="Eelraw Secrag" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+                                <span class="avatar-fallback" style="display:none">ES</span>
+                            </div>
+                            <div class="testi-info">
+                                <strong>Eelraw Secrag</strong>
+                                <span>Yamaha NMAX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal" data-delay="200">
+                        <div class="testi-stars">★★★★½</div>
+                        <p class="testi-text">"Fast approval for installment! Never akong nag-expect na ganun kadali. Ang bait ng staff and very transparent sa lahat ng fees. Bibilhin ko ulit next year!"</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">
+                                <img src="images/customer-3.jpg" alt="Emmanuel Calaguas" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+                                <span class="avatar-fallback" style="display:none">EC</span>
+                            </div>
+                            <div class="testi-info">
+                                <strong>Emmanuel Calaguas</strong>
+                                <span>Honda ADV160</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="testi-dots" id="testiDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Visit Us</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-desc">We're open daily from 8:00 AM to 5:00 PM — come see us at the showroom</p>
+            </div>
+
+            <div class="contact-layout">
+
+                <div class="contact-info reveal">
+                    <h3>Visit Our Showroom</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        </div>
+                        <div>
+                            <strong>Address</strong>
+                            <p>Ground Floor, Sonny Lao Building,<br />Bldg. 888 Jake Gonzales Blvd,<br />Angeles City, Pampanga</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                        </div>
+                        <div>
+                            <strong>Phone</strong>
+                            <p><a href="tel:09338224649">0933 822 4649</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke="white" stroke-width="2" fill="none"/></svg>
+                        </div>
+                        <div>
+                            <strong>Business Hours</strong>
+                            <p>Open Daily<br />8:00 AM – 5:00 PM</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=Volt+Harold+Marketing+Corporation,+Bldg+888+Jake+Gonzales+Blvd,+Angeles+City,+Pampanga" target="_blank" rel="noopener" class="btn btn-primary direction-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>                        Get Directions
+                    </a>
+                </div>
+
+                <div class="contact-map reveal">
+                    <div class="map-container">
+                        <iframe title="Volt Harold Marketing Corporation Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3850.5!2d120.585!3d15.1485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f1a0d93a4f0b%3A0x1234567890!2sBldg.+888+Jake+Gonzales+Blvd%2C+Angeles+City%2C+Pampanga!5e0!3m2!1sen!2sph!4v1"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+                    </div>
+                </div>
+
+                <div class="contact-actions reveal reveal-right">
+                    <h3>Contact Us Directly</h3>
+                    <a href="tel:09338224649" class="contact-action-btn call-btn">
+                        <div class="ca-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                        </div>
+                        <div class="ca-text">
+                            <strong>Call Now</strong>
+                            <span>0933 822 4649</span>
+                        </div>
+                    </a>
+                    <a href="https://m.me/VoltHaroldMarketing" target="_blank" rel="noopener" class="contact-action-btn messenger-btn">
+                        <div class="ca-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.861 1.408 5.406 3.6 7.063V21l3.064-1.693C9.586 19.437 10.77 19.6 12 19.6c5.523 0 10-4.145 10-9.259C22 6.145 17.523 2 12 2zm1.044 12.461l-2.532-2.701L5.899 14.5l4.995-5.306 2.598 2.701 4.548-2.701-4.996 5.267z"/></svg>
+                        </div>
+                        <div class="ca-text">
+                            <strong>Message Us</strong>
+                            <span>on Facebook</span>
+                        </div>
+                    </a>
+                    <a href="sms:09338224649" class="contact-action-btn sms-btn">
+                        <div class="ca-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+                        </div>
+                        <div class="ca-text">
+                            <strong>Send SMS</strong>
+                            <span>0933 822 4649</span>
+                        </div>
+                    </a>
+
+                    <div class="follow-us">
+                        <p>Follow Us</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link fb" aria-label="Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </a>
+                            <a href="#" class="social-link tiktok" aria-label="TikTok">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.07a8.24 8.24 0 0 0 4.82 1.54V7.18a4.85 4.85 0 0 1-1.05-.49z"/></svg>
+                            </a>
+                            <a href="#" class="social-link yt" aria-label="YouTube">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+                            </a>
+                            <a href="#" class="social-link ig" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo footer-logo">
+                        <div class="logo-icon">
+                            <img src="logo.png" alt="">
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Your Trusted Motorcycle Dealer in Angeles City, Pampanga. Authorized dealer for Honda, Yamaha, and Suzuki.</p>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#motorcycles">Motorcycles</a></li>
+                        <li><a href="#brands">Brands</a></li>
+                        <li><a href="#financing">Financing</a></li>
+                        <li><a href="#promotions">Promotions</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Our Brands</h4>
+                    <ul>
+                        <li><a href="#brands">Honda Philippines</a></li>
+                        <li><a href="#brands">Yamaha Motor PH</a></li>
+                        <li><a href="#brands">Suzuki Philippines</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4>Contact Information</h4>
+                    <p>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> Ground Floor, Sonny Lao Building,<br />Bldg. 888 Jake Gonzales Blvd,<br
+                        />Angeles City, Pampanga
+                    </p>
+                    <p>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                        <a href="tel:09338224649">0933 822 4649</a>
+                    </p>
+                    <p>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke="white" stroke-width="2" fill="none"/></svg> Open Daily · 8:00 AM – 5:00 PM
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-container footer-bottom-inner">
+                <p>© 2025 Volt Harold Marketing Corporation. All rights reserved.</p>
+                <p>Angeles City, Pampanga, Philippines</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="float-cta" id="floatCta">
+        <a href="tel:09338224649" class="float-btn float-call" aria-label="Call us">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <span>Call</span>
+        </a>
+        <a href="https://m.me/VoltHaroldMarketing" target="_blank" rel="noopener" class="float-btn float-msg" aria-label="Message us">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.861 1.408 5.406 3.6 7.063V21l3.064-1.693C9.586 19.437 10.77 19.6 12 19.6c5.523 0 10-4.145 10-9.259C22 6.145 17.523 2 12 2z"/></svg>
+            <span>Chat</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
