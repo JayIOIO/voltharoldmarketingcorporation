@@ -1332,29 +1332,59 @@ button {
     background: linear-gradient(90deg, transparent, var(--white-10), transparent);
 }
 
+
+/* MODIFIED: Added masking for the premium smooth fade out at the screen edges */
+
 .testimonials-wrapper {
     position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 16px 0;
+    /* Clean gradient mask for desktop */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
 }
+
+
+/* MODIFIED: Changed from display: grid to a continuous flex marquee track */
 
 .testimonials-track {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 24px;
+    width: max-content;
+    animation: marqueeScroll 35s linear infinite;
 }
 
+
+/* NEW: Smoothly pauses the scrolling animation when someone hovers a card */
+
+.testimonials-wrapper:hover .testimonials-track {
+    animation-play-state: paused;
+}
+
+
+/* MODIFIED: Converted to a fixed-width card style so they scale seamlessly in the track */
+
 .testimonial-card {
+    flex: 0 0 360px;
+    width: 360px;
     background: var(--glass);
     backdrop-filter: blur(12px);
     border: 1px solid var(--white-10);
     border-radius: var(--r-lg);
     padding: 32px;
-    transition: transform 0.3s var(--ease-spring), border-color 0.3s;
+    box-sizing: border-box;
+    /* Ensures padding doesn't alter card width */
+    transition: border-color 0.3s, background 0.3s;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-6px);
     border-color: var(--white-20);
+    background: rgba(255, 255, 255, 0.05);
 }
+
+
+/* UNCHANGED: Kept all your beautiful typography and content styles exactly as they were */
 
 .testi-stars {
     color: var(--gold);
@@ -1415,26 +1445,85 @@ button {
     font-weight: 600;
 }
 
-.testi-dots {
-    display: none;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 24px;
+
+/* NEW: The infinite animation loop logic */
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Loops halfway across perfectly, accounting for half your 24px layout gap */
+        transform: translateX(calc(-50% - 12px));
+    }
 }
 
-.testi-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--white-20);
-    cursor: pointer;
-    transition: background 0.2s, width 0.3s;
-}
 
-.testi-dot.active {
-    background: var(--red);
-    width: 24px;
-    border-radius: 4px;
+/* NEW: Mobile Responsiveness optimization */
+
+@media (max-width: 768px) {
+    /* 1. Force the title area up higher */
+    .testimonials-section {
+        padding: 40px 0 50px 0 !important;
+    }
+    /* 2. FORCE the container to allow side overflowing and center snapping */
+    .testimonials-wrapper {
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        overflow-x: auto !important;
+        /* Enables horizontal swiping */
+        scroll-snap-type: x mandatory !important;
+        /* Forces center snapping */
+        -webkit-overflow-scrolling: touch !important;
+        padding: 24px 0 40px 0 !important;
+        /* Vertical breathing room at bottom */
+    }
+    /* Clear the mobile scrollbar indicator */
+    .testimonials-wrapper::-webkit-scrollbar {
+        display: none !important;
+    }
+    /* 3. SHATTER the desktop grid and force a horizontal line */
+    .testimonials-track {
+        display: flex !important;
+        grid-template-columns: none !important;
+        /* Completely kills the desktop 3-columns */
+        gap: 16px !important;
+        /* Fixed uniform spacing between your boxes */
+        padding: 0 45px !important;
+        /* Leaves room on the screen edges for cards to peek in */
+        width: max-content !important;
+    }
+    /* 4. FORCE the cards to shrink exactly to a clean layout width */
+    .testimonial-card {
+        flex: 0 0 270px !important;
+        /* Stops the box from stretching wide */
+        width: 270px !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+        scroll-snap-align: center !important;
+        /* Centers the card when you swipe */
+        /* Make borders and background pop out sharply */
+        background: var(--glass) !important;
+        border: 1px solid var(--white-10) !important;
+        transform: none !important;
+    }
+    /* Keep the hover from shifting things around on touch screens */
+    .testimonial-card:hover {
+        transform: none !important;
+    }
+    .testi-text {
+        font-size: 13.5px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 12px !important;
+    }
+    /* Hide the old dot navigation element */
+    .testi-dots {
+        display: none !important;
+    }
 }
 
 

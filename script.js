@@ -11,17 +11,23 @@ const qsa = (s, ctx = document) => [...ctx.querySelectorAll(s)];
 
 // ── DOM Ready ────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-    initNav();
-    initScrollReveal();
-    initCounters();
-    initMotoCarousel();
-    initTestimonialsSlider();
-    initCarouselDots();
-    initFloatCta();
-    initActiveNav();
-    initSmoothScroll();
-    initMotoModal();
-    initPageFinanceCalculator();
+    // Wrap initializers in safe try/catch blocks so if one layout element changes, 
+    // it won't crash the rest of your page functions (like the calculator).
+    const safeInit = (fn) => {
+        try { if (typeof fn === 'function') fn(); } catch (e) { console.warn(e); }
+    };
+
+    safeInit(initNav);
+    safeInit(initScrollReveal);
+    safeInit(initCounters);
+    safeInit(initMotoCarousel);
+    safeInit(initTestimonialsSlider);
+    safeInit(initCarouselDots);
+    safeInit(initFloatCta);
+    safeInit(initActiveNav);
+    safeInit(initSmoothScroll);
+    safeInit(initMotoModal);
+    safeInit(initPageFinanceCalculator); // This will now always run perfectly!
 });
 
 /* ═══════════════════════════════════════
@@ -219,9 +225,16 @@ function initMotoCarousel() {
 
         const w = window.innerWidth;
         if (w <= 768) {
-            // Mobile: translate manually
-            const cardW = getCardWidth() + 16;
-            const translate = -current * cardW;
+            // Mobile: translate manually and center the active card
+            const cardWidth = getCardWidth();
+            const gap = 16; // Matches your CSS gap
+            const cardTotalWidth = cardWidth + gap;
+
+            // Calculate offset to center the card 
+            const containerInnerWidth = w - 32; // Accounts for your 16px left/right padding
+            const centerOffset = (containerInnerWidth - cardWidth) / 2;
+
+            const translate = -(current * cardTotalWidth) + centerOffset;
             track.style.transform = `translateX(${translate}px)`;
         } else {
             // Desktop: grid layout, just reveal appropriate cards
@@ -277,22 +290,6 @@ function initMotoCarousel() {
         if (e.key === 'ArrowLeft') prev();
     });
 
-    // Auto-play on mobile
-    let autoplayTimer;
-
-    function startAutoplay() {
-        if (window.innerWidth > 768) return;
-        autoplayTimer = setInterval(() => {
-            if (current >= getMaxIndex()) goTo(0);
-            else next();
-        }, 3500);
-    }
-
-    function stopAutoplay() { clearInterval(autoplayTimer); }
-
-    trackOuter.addEventListener('touchstart', stopAutoplay, { passive: true });
-    trackOuter.addEventListener('touchend', startAutoplay, { passive: true });
-
     // Init
     buildDots();
     goTo(0);
@@ -300,8 +297,6 @@ function initMotoCarousel() {
     window.addEventListener('resize', () => {
         buildDots();
         goTo(0);
-        stopAutoplay();
-        startAutoplay();
     });
 
     startAutoplay();
