@@ -2016,6 +2016,11 @@ button {
         max-width: 300px;
         margin-bottom: 16px;
     }
+    .headline-accent {
+        display: block;
+        color: var(--white);
+        letter-spacing: 0.03em;
+    }
     .hero-sub {
         max-width: 280px;
         font-size: 15px;
